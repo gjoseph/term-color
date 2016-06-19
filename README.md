@@ -1,4 +1,5 @@
-This is a simple CLI tool that sets the background color of your OSX terminal.
+This is a simple CLI tool that sets the background color of your OSX terminal (currently supports both Terminal.app and
+iTerm).
 
 This was initially based off https://red-sweater.com/blog/220/random-color-terminal, converted to Go, and now that it's
 in a non-crazy language, I should be able to add the following features:
@@ -7,6 +8,7 @@ in a non-crazy language, I should be able to add the following features:
 * set color based on hash of current directory
 * save colors per directory
 * running the tool in your PS1 (or in PROMPT_COMMAND) should let it automatically change the color if reaching a "saved" directory
+* reset all windows/tabs in one go (possible in original AppleScript script and Terminal.app)
 
 Kudos:
 ---------
