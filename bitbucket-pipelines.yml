@@ -1,0 +1,6 @@
+pipelines:
+  default:
+    - step:
+        image: golang:1.6.2-onbuild
+        script:
+          - echo "It's Pipelines, baby!"
