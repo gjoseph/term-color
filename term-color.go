@@ -103,7 +103,7 @@ func main() {
         log.Fatal("Unsupported terminal program: ", termProgram)
     }
 
-    err := mack.Tell(app, commands(bgColor, fgColor, fgColor, cursorColor))
+    _, err := mack.Tell(app, commands(bgColor, fgColor, fgColor, cursorColor))
     if err != nil {
         log.Fatal(err)
     }
