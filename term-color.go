@@ -5,7 +5,7 @@ import (
     "log"
     "math/rand"
     "time"
-    "github.com/everdev/mack"
+    "github.com/andybrewer/mack"
     "os"
 )
 
