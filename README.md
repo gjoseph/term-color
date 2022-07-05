@@ -5,10 +5,17 @@ This was initially based off https://red-sweater.com/blog/220/random-color-termi
 in a non-crazy language, I should be able to add the following features:
 
 * save favorite colors, cycle through favorite colors (instead of being limited to new random ones)
-* set color based on hash of current directory
+* set to specified color (support hex)
+* reset to black or system default
+* better contrast algorithm?
+* ban certain color ranges
+* only allow colors that work with colored diff (and/or allow switching color scheme of e.g git diff? -- actually there is, see https://git-scm.com/docs/git-config --get-color```)
+* set color based on hash of current host and/or directory
 * save colors per directory
 * running the tool in your PS1 (or in PROMPT_COMMAND) should let it automatically change the color if reaching a "saved" directory
+
 * reset all windows/tabs in one go (possible in original AppleScript script and Terminal.app)
+* support ANSI instead of (or in addition to) AppleScript - such that colors can be set on remote hosts too (and this script be more portable?)
 
 Build:
 ------
