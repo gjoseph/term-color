@@ -3,6 +3,8 @@ name: Tichu build
 on:
   push:
     branches: [main]
+    tags:
+      - "**"
   pull_request:
     branches: [main]
   # Enable manual triggers:
@@ -14,7 +16,8 @@ jobs:
       fail-fast: false
       matrix:
         os: [
-              macos-13, # for intel support
+              # So we don't actually have to build on macos-13, GOARCH seems to work fine
+              macos-13,
               macos-14,
               macos-15 ]
     runs-on: ${{ matrix.os }}
@@ -25,7 +28,7 @@ jobs:
           go-version: 1.23.5
       - run: go version
       - run: go build
-      - run: GOARCH='amd64' go build -o term-color-amd64
+      - run: GOARCH='amd64' go build -o term-color-x86_64
       - run: echo ${{ github.event.tag }}
       - run: echo ${{ github.ref }}
       - uses: actions/upload-artifact@v4
