@@ -13,7 +13,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ macos-13,
+        os: [
+              macos-13, # for intel support
               macos-14,
               macos-15 ]
     runs-on: ${{ matrix.os }}
@@ -24,10 +25,11 @@ jobs:
           go-version: 1.23.5
       - run: go version
       - run: go build
+      - run: GOARCH='amd64' go build -o term-color-amd64
       - run: echo ${{ github.event.tag }}
       - run: echo ${{ github.ref }}
       - uses: actions/upload-artifact@v4
         with:
           name: term-color-${{ matrix.os }}
-          path: term-color
+          path: term-color*
 
