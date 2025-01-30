@@ -1,4 +1,4 @@
-module bitbucket.org/hpesojg/term-color
+module github.com/gjoseph/term-color
 
 go 1.18
 

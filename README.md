@@ -21,8 +21,8 @@ Build:
 ------
 Until a binary download is available, make sure you have Go and do this:
 ```
-go get bitbucket.org/hpesojg/term-color
-go install bitbucket.org/hpesojg/term-color
+go get github.com/gjoseph/term-color
+go install github.com/gjoseph/term-color
 ```
 
 Kudos:
