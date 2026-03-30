@@ -16,8 +16,6 @@ jobs:
       fail-fast: false
       matrix:
         os: [
-              # So we don't actually have to build on macos-13, GOARCH seems to work fine
-              macos-13,
               macos-14,
               macos-15 ]
     runs-on: ${{ matrix.os }}
