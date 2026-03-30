@@ -1,4 +1,4 @@
-name: Tichu build
+name: Build
 
 on:
   push:
